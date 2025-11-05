@@ -1,121 +1,141 @@
 ---
 marp: true
-title: Titulo Ilustrativo
+title: Logic and Computation
 author: Ana Barbosa
-keywords: marp, theme
+keywords: marp, example, tutorial
 theme: barbosa
+class: style_a
 paginate: true
 _paginate: false
-class: style_a
+footer: © 2025 Logic and Computation — Example Presentation
+math: katex
 ---
+
 <!-- _class: title -->
+# Logic and Computation
 
-# Exemplo de slides Marp — "Barbosa"
-Autor: Ana Barbosa
-Tema: barbosa
+Exploring Boolean operations, Python examples, and mathematical notation.
+
+---
+<!-- _class: style_c-->
+
+# Table of Contents
+
+1. [Introduction](#3)
+2. [Long Text Section](#4)
+3. [Boolean Operations](#5)
+4. [Python Logic Example](#6)
+5. [Mathematical Expressions](#7)
+6. [Summary](#8)
 
 ---
 
-# Sumário
-- Slides longos
-- Blocos de código
-- Dicas de apresentação
-- Exemplos práticos
+<!-- _class: style_b -->
+# Introduction
+
+This presentation demonstrates slides with:
+
+* Dynamic **backgrounds**
+* Highlighted **code blocks**
+* **Mathematical notation**
+* Logical **operations and truth tables**
+
+Everything is written in Markdown and styled with a custom Marp theme.
 
 ---
+<style scoped>section { font-size: 20px; }</style>
+
+<!-- _class: style_b -->
+# Long Text Section 📝
+
+In the field of computer science, **logic and computation** form the foundation upon which modern systems are built.
+Boolean logic, introduced by George Boole in the 19th century, established a mathematical framework for reasoning about truth and falsehood.
+This binary perspective — where every statement is either *true* or *false* — has since become the basis of digital electronics, programming languages, and algorithmic design.
+
+Computers operate on a series of logical decisions that are fundamentally Boolean in nature.
+Every conditional statement, from a simple `if` clause in Python to the control logic of a microprocessor, relies on evaluating truth values.
+Over time, this simple idea has evolved into more complex logical systems such as **fuzzy logic**, **modal logic**, and **temporal logic**, each extending the expressive power of reasoning in different contexts.
+
+In practical programming, logic manifests not only through conditionals but also through **control structures**, **error handling**, and **decision trees**.
+A developer often writes logic that determines how data flows through a program, how it reacts to unexpected input, or how it makes optimized decisions based on real-time conditions.
+Even in artificial intelligence, Boolean foundations persist beneath the layers of neural networks — determining activation, propagation, and optimization through mathematical logic.
+
+---
+
+
+# Boolean Operations ⚙️
+
+| Operation | Symbol | Example | Result |
+|------------|---------|----------|---------|
+| AND | ∧ / `and` | `1 and 0` | `0` |
+| OR  | ∨ / `or` | `1 or 0` | `1` |
+| XOR | ⊕ / `^` | `1 ^ 1` | `0` |
+| NOT | ¬ / `not` | `not 1` | `0` |
+
+```python
+a, b = True, False
+
+print(a and b)  # AND
+print(a or b)   # OR
+print(a ^ b)    # XOR
+print(not a)    # NOT
+````
+
+---
+
 <!-- _class: style_b -->
 
-# Slide longo: Visão geral
-Este slide demonstra conteúdo extenso, ideal para quando precisa explicar conceitos com detalhes:
-- Contexto e motivação
-- Requisitos e restrições
-- Abordagem proposta
-- Exemplos práticos
-- Comparações com alternativas
-- Conclusões e próximos passos
+# Python Logic Example 💻
 
-Detalhamento:
-1. Comece com o problema.
-2. Mostre soluções conhecidas.
-3. Aponte trade-offs.
-4. Explique a solução escolhida passo a passo.
-5. Mostre código e resultados.
+```python
+def logic_ops(a: bool, b: bool) -> dict:
+    return {
+        "AND": a and b,
+        "OR": a or b,
+        "XOR": a ^ b,
+        "NAND": not (a and b),
+    }
 
----
+result = logic_ops(True, False)
 
-# Slide longo: Uso em projeto real
-- Cenário: aplicação web com backend em Node.js
-- Requisitos: performance, escalabilidade, observabilidade
-- Estratégia:
-  - Microservices com filas para tarefas pesadas
-  - Cache para respostas frequentes
-  - Monitoramento via métricas e logs estruturados
-- Resultado esperado: menor latência e maior resiliência
-
----
-<!-- _class: style_b -->
-
-# Código: Exemplo JavaScript (API)
-```javascript
-// handlers/user.js
-const express = require('express');
-const router = express.Router();
-
-// Simulação de um handler assíncrono
-router.get('/users/:id', async (req, res) => {
-  try {
-    const id = req.params.id;
-    // chamada fictícia ao banco
-    const user = await findUserById(id);
-    if (!user) return res.status(404).json({ error: 'Usuário não encontrado' });
-    res.json(user);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Erro interno' });
-  }
-});
-
-module.exports = router;
+for op, value in result.items():
+    print(f"{op}: {value}")
 ```
 
----
-
-# Código: Pipeline CI/CD (exemplo YAML)
-```yaml
-# .github/workflows/ci.yml
-name: CI
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-```
+> This example shows a simple function returning multiple logical evaluations.
 
 ---
 
-# Dicas rápidas para apresentações
-- Tenha um slide "longo" para detalhar sem perder o público: use marcadores claros.
-- Use blocos de código pequenos e legíveis; destaque apenas o essencial.
-- Use imagens e diagramas quando necessário (evite sobrecarregar texto).
-- Termine com um slide de "Próximos passos" e contatos.
+
+# Mathematical Expressions 🧮
+
+Basic quadratic equation:
+
+$$
+f(x) = a x^2 + b x + c
+$$
+
+Logical equivalences:
+
+$$
+\begin{aligned}
+A \land B &= B \land A \
+A \lor (B \lor C) &= (A \lor B) \lor C \
+\neg(A \land B) &= \neg A \lor \neg B
+\end{aligned}
+$$
 
 ---
+
 <!-- _class: style_c -->
 
-# Conclusão
-- Slides longos são úteis para documentação e explicações detalhadas.
-- Combine teoria, código e exemplos práticos.
-- Perguntas?
+# Summary
 
-<!-- Speaker notes:
-- Preparar demonstração ao vivo do endpoint.
-- Mostrar logs de exemplo e métrica de latência.
--->
+* Boolean logic is fundamental to computing.
+* Python provides intuitive operators for it.
+* Math and logic can be elegantly combined in Markdown.
+* Custom themes enhance clarity and style.
+
+---
+
+## <!-- fit --> Thank You!
