@@ -1,0 +1,91 @@
+/*!
+ * Barbosa theme for Marp.
+ *
+ * @theme barbosa
+ * @author Ana Barbosa
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+@import 'default';
+
+/* Lexend */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/* Cascadia Code */
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: "Lexend", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  font-weight: initial;
+
+  --text: #06080e;
+  --background: #fbfcfe;
+  --primary: #4264d1;
+  --secondary: #8199e9;
+  --accent: #486eea;
+
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1, h2, h3{
+  color: var(--text)
+}
+
+pre, code{
+  font-family: "Cascadia Code", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, Liberation Mono, Lucida Console, monospace;
+  font-weight: initial;
+  border: #aaa solid 2px;
+  border-radius: 10px;
+}
+
+footer {
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+
+  /* Place to right-bottom */
+  left: 30px;
+  bottom: 20px;
+}
+
+section.title h1, section.title p {
+  text-align: center;
+}
+section.title h1 {
+  font-size: 3em;
+  color: var(--accent)
+}
+section.title p {
+  font-size: 1em;
+}
+
+
+section.style_a, section.style_b, section.style_c {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section.style_a{
+  background-image: url('https://raw.githubusercontent.com/dvanael/marp-barbosa/refs/heads/main/theme/tela_a.svg');
+}
+section.style_b{
+  background-image: url('https://raw.githubusercontent.com/dvanael/marp-barbosa/refs/heads/main/theme/tela_b.svg');
+}
+section.style_c{
+  background-image: url('https://raw.githubusercontent.com/dvanael/marp-barbosa/refs/heads/main/theme/tela_c.svg');
+}
+
