@@ -57,9 +57,11 @@ pre, code, table{
   border: var(--secondary) solid 2px;
   border-radius: 10px;
 }
-
 th, td {
   border: 2px solid grey;
+}
+table th{
+  border-bottom: 2px solid var(--secondary);
 }
 
 footer {
