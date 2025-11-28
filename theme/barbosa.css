@@ -51,8 +51,15 @@ a{
 pre, code{
   font-family: "Cascadia Code", monospace;
   font-weight: initial;
+}
+
+pre, code, table{
   border: var(--secondary) solid 2px;
   border-radius: 10px;
+}
+
+th, td {
+  border: 2px solid grey;
 }
 
 footer {
@@ -78,7 +85,6 @@ section.title h1 {
 section.title p {
   font-size: 1em;
 }
-
 
 section.style_a, section.style_b, section.style_c {
   background-size: cover;
